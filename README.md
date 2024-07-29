@@ -105,6 +105,8 @@ python -m venv venv
 4. Ative o ambiente virtual:
 ```bash
 source venv/bin/activate - Linux ou macOS
+```
+```bash
 venv\Scripts\activate - Windows
 ```
 
@@ -113,7 +115,13 @@ venv\Scripts\activate - Windows
 pip install -r requirements.txt
 ```
 
-6. Execute o servidor:
+6. Execute as migrações:
+```bash
+flask db init && flask db migrate && flask db upgrade
+```
+
+
+7. Execute o servidor:
 ```bash
 python main.py
 ```
@@ -131,3 +139,46 @@ http://localhost:52000/api/docs
 ```bash
 python -m unittest discover -s tests
 ```
+
+## Orientações
+
+1. Criar um usuário:
+```url
+POST http://localhost:52000/api/users/register
+```
+request body:
+```json
+{
+    "name": "admin",
+    "email": "admin@localhost.com",
+    "password": "admin#123"
+}
+```
+
+2. Para autenticar um usuário:
+```url
+POST http://localhost:52000/api/users/login
+```
+request body:
+```json
+{
+    "email": "admin@localhost.com",
+    "password": "admin#123"
+}
+```
+response:
+```json
+{
+    "access_token": "{access_token}"
+}
+```
+
+3. Para acessar as rotas protegidas, adicione o token JWT recebido do login no header da requisição:
+```url
+Authorization: Bearer {access_token}
+```
+
+
+## Autor
+
+- Danillo Silva
