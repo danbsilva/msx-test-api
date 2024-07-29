@@ -73,6 +73,8 @@ msx-test-api
 1. Clone o repositório:
 ```bash
 git clone https://github.com/danbsilva/msx-test-api.git
+```
+```bash
 cd msx-test-api
 ```
 
