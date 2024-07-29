@@ -1,10 +1,10 @@
 # msx-test-api
 
-## Description
+## Descrição
 
 API RESTful para gerenciamento de veículos.
 
-## Features
+## Características
 
 ### Usuários
 - [x] Criação de usuários - /api/users/register
@@ -24,7 +24,7 @@ API RESTful para gerenciamento de veículos.
 - [x] Flask
 - [x] sqlite3
 
-## Estrutura do projeto
+## Estrutura do Projeto
 
 ```
 msx-test-api
@@ -68,7 +68,7 @@ msx-test-api
 ├── README.md
 ```
 
-## Setup
+## Instalação
 
 1. Clone o repositório:
 ```bash
@@ -104,7 +104,8 @@ python -m venv venv
 
 4. Ative o ambiente virtual:
 ```bash
-source venv/bin/activate
+source venv/bin/activate - Linux ou macOS
+venv\Scripts\activate - Windows
 ```
 
 5. Instale as dependências:

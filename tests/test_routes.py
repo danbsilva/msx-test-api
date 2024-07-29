@@ -14,7 +14,7 @@ class TestUserRoutes(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        os.environ['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db_test.db'
+        os.environ['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db_vehicles_test.db'
         cls.app = app.create_app()
         cls.app_context = cls.app.app_context()
         cls.app_context.push()
